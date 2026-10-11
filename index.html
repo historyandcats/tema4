@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тема 4. Нашествия с Востока и Запада — История и котики</title>
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#f7941d;--orange-d:#e07a0b;--navy:#3d3a5c;--blue:#5b7fc0;--cream:#fdf6ec;--beige:#f6e7d3;--line:#ecd9bf;--ink:#3d3a5c;--soft:#7d7690;--ok:#3f9d5a;--ok-bg:#e8f5ec;--bad:#d2493f;--bad-bg:#fcebea;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--cream);font-size:17px;line-height:1.55}
+h1,h2,h3,.btn,.brand{font-family:'Rubik',system-ui,sans-serif}
+a{color:var(--blue)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;line-height:1;color:var(--navy);text-decoration:none;text-transform:lowercase}
+.brand img{height:42px}
+.brand span{display:block}
+nav.links{margin-left:auto;display:flex;gap:4px}
+nav.links a{text-decoration:none;color:var(--navy);font-weight:700;font-size:15px;padding:8px 12px;border-radius:10px}
+nav.links a:hover{background:var(--beige)}
+.sub-btn{background:var(--orange);color:#fff!important;border-radius:999px;padding:9px 16px!important;font-family:'Rubik';font-weight:600}
+.sub-btn:hover{background:var(--orange-d)!important}
+.hero{padding:44px 0 26px}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.pill{display:inline-block;background:var(--navy);color:#fff;font-family:'Rubik';font-weight:600;font-size:14px;padding:5px 14px;border-radius:999px;letter-spacing:.03em}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.02;margin:14px 0 10px;color:var(--navy);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{margin:0;color:var(--soft);max-width:560px;font-size:18px}
+.hero img{width:170px}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.steps a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;text-decoration:none;color:var(--navy)}
+.steps a b{color:var(--orange);margin-right:4px}
+section.block{padding:30px 0;scroll-margin-top:60px}
+.sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+.sec-h .n{font-family:'Rubik';font-weight:800;color:var(--orange);font-size:30px}
+.sec-h h2{margin:0;font-size:28px;color:var(--navy)}
+.sec-h p{margin:0 0 0 auto;color:var(--soft);font-size:15px}
+.videos{display:grid;gap:22px}
+.video{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.video .vh{display:flex;align-items:center;gap:12px;padding:14px 18px}
+.video .vh .tag{background:var(--beige);color:var(--orange-d);font-family:'Rubik';font-weight:700;border-radius:10px;padding:4px 10px;font-size:14px}
+.video .vh h3{margin:0;font-size:19px}
+.video .vh a{margin-left:auto;font-size:14px;font-weight:700}
+.ratio{position:relative;aspect-ratio:16/9;background:#2b2840}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.dl{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.dl:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(61,58,92,.12)}
+.dl .th{aspect-ratio:4/3;background:var(--beige);overflow:hidden;border-bottom:1px solid var(--line)}
+.dl .th img{width:100%;height:100%;object-fit:cover;object-position:top}
+.dl .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.dl h3{margin:0;font-size:18px}
+.dl .meta{color:var(--soft);font-size:14px}
+.dl .go{margin-top:10px;align-self:flex-start;background:var(--navy);color:#fff;font-family:'Rubik';font-weight:600;font-size:14px;padding:8px 14px;border-radius:12px}
+.big-actions{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.big{border-radius:24px;padding:26px;color:#fff;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.big.t{background:var(--orange)} .big.p{background:var(--navy)}
+.big h3{margin:0;font-size:26px}
+.big p{margin:0;opacity:.9}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-weight:600;font-size:17px;border-radius:14px;padding:13px 22px;text-decoration:none;transition:filter .15s,transform .1s}
+.btn:active{transform:translateY(1px)}
+.btn.w{background:#fff;color:var(--navy);align-self:flex-start;margin-top:10px}
+.btn.o{background:var(--orange);color:#fff}
+.btn.n{background:var(--navy);color:#fff}
+.btn.g{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn:hover{filter:brightness(1.05)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+/* app views */
+.view{display:none}
+.view.on{display:block}
+.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px}
+.qtop{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.back{background:none;border:0;color:var(--soft);font-weight:700;cursor:pointer;font-size:15px;padding:0}
+.prog{flex:1;min-width:160px;height:10px;background:var(--beige);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--orange);border-radius:99px;transition:width .3s}
+.score-mini{font-family:'Rubik';font-weight:700;color:var(--navy);font-size:15px}
+.qnum{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qnum b{background:var(--orange);color:#fff;font-family:'Rubik';width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px}
+.qnum span{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--soft);font-weight:800}
+.q{font-weight:700;margin:0 0 14px}
+table.mt{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:16px;margin-bottom:6px}
+.mt th{background:var(--beige);text-align:left;font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--soft);padding:9px 12px}
+.mt td{padding:8px 12px;border-top:1px solid var(--line);vertical-align:top}
+.mt td+td,.mt th+th{border-left:1px solid var(--line)}
+.mt .blank{display:inline-block;min-width:70px;border-bottom:1.5px solid var(--orange);color:var(--orange-d);font-weight:800}
+ol.items{list-style:none;margin:0 0 6px;padding:0}
+ol.items li{padding:5px 0 5px 30px;position:relative}
+ol.items li b{position:absolute;left:0;color:var(--orange-d)}
+.src{background:var(--cream);border-left:4px solid var(--orange);border-radius:0 14px 14px 0;padding:14px 18px;font-style:italic;margin:0 0 16px}
+.src p{margin:0 0 8px}.src p:last-child{margin:0}
+.intro{font-weight:800;margin-bottom:8px}
+.map{margin:4px 0 12px;text-align:center}
+.map img{max-width:100%;max-height:640px;border-radius:12px;border:1px solid var(--line);cursor:zoom-in}
+.pool{columns:2;column-gap:24px}
+.answer{margin-top:20px;padding-top:18px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px}
+.cells{display:flex}
+.cell{display:flex;flex-direction:column;align-items:center}
+.cell label{font-weight:800;font-size:13px;color:var(--soft);margin-bottom:3px;height:18px}
+.cell input{width:46px;height:52px;text-align:center;font-family:'Rubik';font-size:22px;font-weight:700;color:var(--navy);border:2px solid #d8c2a4;margin-left:-2px;background:#fffaf3;outline:none}
+.cell:first-child input{border-radius:12px 0 0 12px;margin-left:0}.cell:last-child input{border-radius:0 12px 12px 0}
+.cell input:focus{border-color:var(--orange);position:relative;z-index:1;background:#fff}
+input.txt{height:52px;border:2px solid #d8c2a4;border-radius:12px;padding:0 16px;font-size:19px;font-family:'Rubik';font-weight:600;color:var(--navy);width:min(320px,100%);background:#fffaf3;outline:none}
+input.txt:focus{border-color:var(--orange);background:#fff}
+.hint{color:var(--soft);font-size:14px;width:100%;margin:-6px 0 0}
+.fb{margin-top:18px;border-radius:16px;padding:16px 18px;display:none}
+.fb.on{display:block}
+.fb.ok{background:var(--ok-bg);border:1px solid #bfe3c9}
+.fb.bad{background:var(--bad-bg);border:1px solid #f2c4c0}
+.fb .verdict{font-family:'Rubik';font-weight:700;font-size:20px;display:flex;align-items:center;gap:8px}
+.fb.ok .verdict{color:var(--ok)}.fb.bad .verdict{color:var(--bad)}
+.fb .right{margin:6px 0 10px;font-weight:700}
+.fb .right code{font-family:'Rubik';background:#fff;border-radius:8px;padding:2px 10px;font-size:18px;color:var(--navy);border:1px solid var(--line)}
+.fb .ex p{margin:0 0 6px;font-size:15.5px}
+.nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+.result{text-align:center;padding:10px 0}
+.result img{width:140px}
+.result .big-score{font-family:'Rubik';font-weight:800;font-size:72px;color:var(--orange);line-height:1;margin:10px 0 4px}
+.result h2{margin:6px 0;color:var(--navy)}
+.grid30{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;max-width:520px;margin:22px auto}
+.grid30 button{aspect-ratio:1;border-radius:10px;border:0;font-family:'Rubik';font-weight:700;color:#fff;cursor:pointer;font-size:15px}
+.grid30 .ok{background:var(--ok)}.grid30 .bad{background:var(--bad)}
+.dots{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.dots button{width:26px;height:26px;border-radius:8px;border:1.5px solid var(--line);background:#fff;font-size:12px;font-weight:800;color:var(--soft);cursor:pointer;padding:0}
+.dots button.cur{border-color:var(--orange);color:var(--orange-d)}
+.dots button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.dots button.bad{background:var(--bad);border-color:var(--bad);color:#fff}
+/* part 2 */
+.p2{display:grid;gap:18px}
+.p2 .panel{padding:22px 24px}
+.lines{margin:8px 0 0;padding:0;list-style:none}
+.lines li{padding:4px 0;color:var(--soft)}
+.lines li span{display:inline-block;width:62%;border-bottom:1.5px solid var(--line);margin-left:8px;height:1em}
+.reveal{margin-top:16px}
+.ans{display:none;margin-top:14px;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.ans.on{display:block}
+.ans h4{margin:0 0 8px;font-family:'Rubik';color:var(--orange-d)}
+.ans p{margin:0 0 8px;font-size:16px}
+details.srcd{margin-bottom:14px}
+details.srcd summary{cursor:pointer;font-weight:800;color:var(--blue)}
+footer{padding:40px 0 50px;text-align:center;color:var(--soft);font-size:15px}
+footer img{width:60px;display:block;margin:0 auto 8px}
+.lightbox{position:fixed;inset:0;background:rgba(30,28,45,.85);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:10px;background:#fff}
+@media (max-width:760px){
+  body{font-size:16px}
+  nav.links a:not(.sub-btn){display:none}
+  .hero .wrap{grid-template-columns:1fr}.hero img{display:none}
+  .big-actions{grid-template-columns:1fr}
+  .sec-h{flex-wrap:wrap}.sec-h p{margin:0;width:100%}
+  .panel{padding:18px}
+  .mt{font-size:14.5px}.mt td,.mt th{padding:7px 8px}
+  .pool{columns:1}
+  .cell input{width:40px;height:48px}
+  .grid30{grid-template-columns:repeat(6,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#" onclick="go('home');return false"><img src="img/logo.png" alt=""><span>история<br>и котики</span></a>
+  <nav class="links">
+    <a href="#" onclick="go('home','videos');return false">Видео</a>
+    <a href="#" onclick="go('home','materials');return false">Материалы</a>
+    <a href="#" onclick="go('test');return false">Тест</a>
+    <a href="#" onclick="go('part2');return false">Вторая часть</a>
+    <a class="sub-btn" href="https://t.me/historyandcats" target="_blank" rel="noopener">Подписаться</a>
+  </nav>
+</div></header>
+
+<main>
+<!-- HOME -->
+<div id="v-home" class="view on">
+  <div class="hero"><div class="wrap">
+    <div>
+      <span class="pill">Тема 4</span>
+      <h1>Нашествия <em>с Востока и Запада</em></h1>
+      <p>Смотрим лекции, работаем со скриптом и материалами, а потом проверяем себя тестом и заданиями второй части.</p>
+      <div class="steps">
+        <a href="#videos"><b>1</b>Видеоуроки</a>
+        <a href="#scripts"><b>2</b>Скрипты</a>
+        <a href="#materials"><b>3</b>Материалы</a>
+        <a href="#practice"><b>4</b>Практика</a>
+      </div>
+    </div>
+    <img src="img/logo.png" alt="">
+  </div></div>
+
+  <section class="block" id="videos"><div class="wrap">
+    <div class="sec-h"><span class="n">01</span><h2>Видеоуроки</h2><p>2 лекции</p></div>
+    <div class="videos" id="videoList"></div>
+  </div></section>
+
+  <section class="block" id="scripts"><div class="wrap">
+    <div class="sec-h"><span class="n">02</span><h2>Скрипты</h2><p>Пустой — заполняем во время лекции, заполненный — для проверки</p></div>
+    <div class="cards">
+      <a class="dl" href="materials/skript-5-pustoj.pdf" download><div class="th"><img src="img/skript-pust.jpg" alt=""></div><div class="bd"><h3>Скрипт 4 · пустой</h3><span class="meta">PDF · для заполнения</span><span class="go">Скачать</span></div></a>
+      <a class="dl" href="materials/skript-5-zapolnennyj.pdf" download><div class="th"><img src="img/skript-zap.jpg" alt=""></div><div class="bd"><h3>Скрипт 4 · заполненный</h3><span class="meta">PDF · для проверки</span><span class="go">Скачать</span></div></a>
+    </div>
+  </div></section>
+
+  <section class="block" id="materials"><div class="wrap">
+    <div class="sec-h"><span class="n">03</span><h2>Материалы</h2><p>Скачайте и распечатайте</p></div>
+    <div class="cards">
+      <a class="dl" href="materials/zapominashka-4.pdf" download><div class="th"><img src="img/zapom.jpg" alt=""></div><div class="bd"><h3>Запоминашка</h3><span class="meta">PDF · правители, даты, персоны</span><span class="go">Скачать</span></div></a>
+      <a class="dl" href="materials/konturnaya-karta-4.pdf" download><div class="th"><img src="img/karta.jpg" alt=""></div><div class="bd"><h3>Контурная карта</h3><span class="meta">PDF · задание для печати</span><span class="go">Скачать</span></div></a>
+      <a class="dl" href="materials/konspekt-4.pdf" download><div class="th"><img src="img/konspekt.jpg" alt=""></div><div class="bd"><h3>Конспект</h3><span class="meta">PDF · теория по теме</span><span class="go">Скачать</span></div></a>
+    </div>
+  </div></section>
+
+  <section class="block" id="practice"><div class="wrap">
+    <div class="sec-h"><span class="n">04</span><h2>Практика</h2></div>
+    <div class="big-actions">
+      <div class="big t"><h3>Тест · первая часть</h3><p>30 заданий. После каждого ответа сразу видно, верно или нет, и пояснение. В конце — баллы.</p><button class="btn w" onclick="startTest()">Пройти тест →</button></div>
+      <div class="big p"><h3>Вторая часть</h3><p>6 заданий с развёрнутым ответом. Сначала напишите ответ сами, потом сверьтесь с эталоном.</p><button class="btn w" onclick="go('part2')">Вторая часть →</button></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- TEST -->
+<div id="v-test" class="view"><section class="block"><div class="wrap">
+  <div class="panel" id="testPanel"></div>
+</div></section></div>
+
+<!-- PART 2 -->
+<div id="v-part2" class="view"><section class="block"><div class="wrap">
+  <div class="qtop"><button class="back" onclick="go('home','practice')">← К теме</button></div>
+  <div class="sec-h"><span class="n">II</span><h2>Вторая часть</h2><p>Задания с развёрнутым ответом</p></div>
+  <div class="p2" id="p2list"></div>
+</div></section></div>
+</main>
+
+<footer><img src="img/logo.png" alt=""><div>История и котики · <a href="https://t.me/historyandcats" target="_blank" rel="noopener">t.me/historyandcats</a></div></footer>
+<div class="lightbox" id="lb" onclick="this.classList.remove('on')"><img alt=""></div>
+
+<script>
+const VIDEOS=[{"t": "Лекция 1", "id": "98f6ee7463a20deb99da98aff20cf9bc", "p": "OZcXY1Ar9EhNp-6NfA2DHw"}, {"t": "Лекция 2", "id": "e8ae38b237074de299555141e10dc0f3", "p": "VOO3oaSx5-tmvuw07k0OEg"}];
+const QUIZ=[{"kind": "match", "q": "Установите соответствие между событиями и годами: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Годы"], "left": ["Ледовое побоище", "Невская битва", "сожжение Москвы", "падение Рязани"], "right": ["1240 г.", "1200 г.", "1238 г.", "1242 г.", "1241 г.", "1237 г."], "ans": "4136", "expl": ["А) Битва на Чудском озере, в которой войска Александра Невского разгромили немецких крестоносцев, произошла в 1242 году.", "Б) Сражение, в котором новгородское войско под командованием князя Александра Ярославича разбило шведский отряд, состоялось в 1240 году.", "В) В ходе монгольского нашествия на Северо-Восточную Русь Москва была взята и сожжена войсками Батыя в 1238 году.", "Г) После многодневной осады Рязань была взята штурмом и разрушена войсками Батыя в 1237 году."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "match", "q": "Установите соответствие между событиями и годами: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Годы"], "left": ["битва на реке Сить", "взятие Батыем Киева", "создание Ливонского ордена", "битва на реке Калке"], "right": ["1223 г.", "1240 г.", "1242 г.", "1237 г.", "1238 г.", "1293 г."], "ans": "5241", "expl": ["А) Сражение, в котором войско владимирского князя Юрия Всеволодовича было разгромлено монголами, произошло в 1238 году.", "Б) После продолжительной осады монгольские войска под руководством Батыя взяли Киев в 1240 году.", "В) Ливонский орден был образован на землях Ливонии в 1237 году.", "Г) Первое сражение русских и половецких дружин с монгольским войском состоялось в 1223 году и завершилось тяжёлым поражением русских князей."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "match", "q": "Установите соответствие между событиями и годами: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Годы"], "left": ["начало правления хана Узбека", "потеря Юрьева", "осада Торжка", "получение Александром Невским ярлыка на великое княжение"], "right": ["1223 г.", "1224 г.", "1252 г.", "1313 г.", "1242 г.", "1238 г."], "ans": "4263", "expl": ["А) Хан Узбек вступил на престол Золотой Орды в 1313 году. При нём государственной религией Орды стал ислам.", "Б) Русский город Юрьев (основанный Ярославом Мудрым) был захвачен немецкими крестоносцами в 1224 году.", "В) После разгрома Северо-Восточной Руси монгольские войска осадили и взяли город Торжок в 1238 году после двухнедельной осады.", "Г) Князь Александр Ярославич Невский получил от монголов ярлык на великое княжение Владимирское в 1252 году."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "match", "q": "Установите соответствие между событиями и годами: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Годы"], "left": ["разгром Рязани монголами", "захват Ливонским орденом Пскова", "Ярослав Всеволодович получил ярлык на всю Русь", "перепись населения ордынцами на Руси"], "right": ["1237 г.", "1257 г.", "1242 г.", "1240 г.", "1213 г.", "1243 г."], "ans": "1462", "expl": ["А) В декабре 1237 года монгольское войско хана Батыя осадило и взяло Рязань — первый крупный русский город, павший в ходе монгольского нашествия. После этого Батый двинулся на Владимиро-Суздальскую землю.", "Б) В 1240 году рыцари Ливонского ордена взяли Изборск, а затем захватили Псков. Это было частью наступления крестоносцев на новгородские и псковские земли. Освободил Псков Александр Невский зимой 1242 года, перед Ледовым побоищем.", "В) В 1243 году Батый дал Ярославу Всеволодовичу ярлык на всю Русь и отправил князя в Каракорум для утверждения ярлыка.", "Г) В 1257 году монгольские чиновники («численники») провели перепись населения на Северо-Востоке Руси для установления размеров дани («выхода»). Перепись вызывала недовольство и восстания."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "match", "q": "Установите соответствие между событиями и годами: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Годы"], "left": ["смерть Ярослава Всеволодовича в Каракоруме", "битва на реке Калке", "падение Киева", "осада и взятие Владимира монголами"], "right": ["1240 г.", "1223 г.", "1203 г.", "1238 г.", "1246 г.", "1262 г."], "ans": "5214", "expl": ["А) Великий князь Владимирский Ярослав Всеволодович (отец Александра Невского) был вызван в столицу Монгольской империи Каракорум, где в 1246 году умер (по некоторым данным, был отравлен).", "Б) Битва на реке Калке — первое сражение русско-половецких войск против монгольского войска под командованием Джэбэ и Субэдэя. Закончилась разгромом русских и половецких сил. Это было первое столкновение Руси с монголами.", "В) В декабре 1240 года монгольское войско хана Батыя захватило и разрушило Киев. Город был разорён, большинство жителей перебито.", "Г) В феврале 1238 года монгольское войско хана Батыя осадило и взяло штурмом столицу Северо-Восточной Руси — Владимир. После падения Владимира монголы двинулись дальше на север."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "chrono", "q": "Расположите в хронологической последовательности исторические события. Запишите цифры, которыми обозначены исторические события, в правильной последовательности.", "items": ["война Батыя у Адриатического моря", "смерть Чингисхана", "Ледовое побоище"], "ans": "213", "expl": ["1) война Батыя у Адриатического моря — 1242 г. (начало года)", "2) смерть Чингисхана — 1227 г.", "3) Ледовое побоище — 5 апреля 1242 г."], "check": {"mode": "cells", "n": 3, "letters": false}}, {"kind": "chrono", "q": "Расположите в хронологической последовательности исторические события. Запишите цифры, которыми обозначены исторические события, в правильной последовательности.", "items": ["основание Ордена меченосцев", "смерть Александра Невского", "битва на р. Сити"], "ans": "132", "expl": ["1) основание Ордена меченосцев — 1202 г.", "2) смерть Александра Невского — 1263 г.", "3) битва на р. Сити — 1238 г."], "check": {"mode": "cells", "n": 3, "letters": false}}, {"kind": "chrono", "q": "Расположите в хронологической последовательности исторические события. Запишите цифры, которыми обозначены исторические события, в правильной последовательности.", "items": ["битва на реке Сити", "потеря Юрьева", "Шестой крестовый поход"], "ans": "231", "expl": ["1) битва на реке Сити — 1238 г.", "2) потеря Юрьева — 1224 г.", "3) Шестой крестовый поход — 1228–1229 гг."], "check": {"mode": "cells", "n": 3, "letters": false}}, {"kind": "chrono", "q": "Расположите в хронологической последовательности исторические события. Запишите цифры, которыми обозначены исторические события, в правильной последовательности.", "items": ["захват Константинополя крестоносцами", "взятие Рязани войсками Батыя", "получение Александром Невским ярлыка на великое княжение владимирское"], "ans": "123", "expl": ["1) захват Константинополя крестоносцами — 1204 г.", "2) взятие Рязани войсками Батыя — 1237 г.", "3) получение Александром Невским ярлыка на великое княжение владимирское — 1252 г."], "check": {"mode": "cells", "n": 3, "letters": false}}, {"kind": "chrono", "q": "Расположите в хронологической последовательности исторические события. Запишите цифры, которыми обозначены исторические события, в правильной последовательности.", "items": ["осада и взятие Владимира монголами", "повторный захват Иерусалима", "битва у Раковора"], "ans": "123", "expl": ["1) осада и взятие Владимира монголами — 1238 г.", "2) повторный захват Иерусалима — 1244 г.", "3) битва у Раковора — 1268 г."], "check": {"mode": "cells", "n": 3, "letters": false}}, {"kind": "chrono", "q": "Расположите в хронологической последовательности исторические события. Запишите цифры, которыми обозначены исторические события, в правильной последовательности.", "items": ["Кревская уния", "сожжение Москвы", "Невская битва"], "ans": "231", "expl": ["1) Кревская уния — 1385 г.", "2) сожжение Москвы — 1238 г.", "3) Невская битва — 1240 г."], "check": {"mode": "cells", "n": 3, "letters": false}}, {"kind": "match", "q": "Установите соответствие между процессами (явлениями, событиями) и фактами, относящимися к этим процессам (явлениям, событиям): к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["Процессы (явления, события)", "Факты"], "left": ["нашествие Батыя на Северо-Восточную Русь", "новгородско-шведское противостояние в первой половине XIII в.", "новгородско-ливонское противостояние начала 1240-х гг.", "нашествие Батыя на Южную Русь"], "right": ["взятие монголами Чернигова", "взятие Пскова войсками Александра Невского", "битва при Салнице", "битва на р. Сить", "битва на р. Калке", "Невская битва"], "ans": "4621", "expl": ["А) Войска Батыя разгромили владимирского князя Юрия Всеволодовича во время нашествия на Северо-Восточную Русь на р. Сить.", "Б) Невская битва 1240 г. — наиболее известный вооружённый конфликт Новгородской республики и Шведского королевства в XIII в.", "В) Перед решающим сражением (битвой на Чудском озере) Александр Невский освободил Псков от ливонских сил.", "Г) Один из городов, взятых Батыем во время похода на Южную Русь, — Чернигов."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "match", "q": "Установите соответствие между процессами (явлениями, событиями) и фактами, относящимися к этим процессам (явлениям, событиям): к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["Процессы (явления, события)", "Факты"], "left": ["нашествие Батыя на Северо-Восточную Русь", "нашествие Батыя на Южную Русь", "борьба Руси с Ливонским орденом", "столкновение объединённых русско-половецких сил с монгольским войском"], "right": ["поражение в битве на р. Ворскле", "падение Переяславля", "битва на р. Калке", "взятие Пекина", "взятие Александром Невским Копорья", "разгром Рязани"], "ans": "6253", "expl": ["А) В декабре 1237 года монгольское войско хана Батыя начало нашествие на Северо-Восточную Русь с разгрома Рязани — первого крупного русского города, павшего в ходе нашествия.", "Б) В 1239–1240 годах Батый совершил поход на Южную Русь. В 1239 году пал Переяславль (Южный), затем Чернигов, а в декабре 1240 года — Киев.", "В) Александр Ярославич во главе новгородцев взял крепость Копорье и приказал срыть её.", "Г) В конце мая 1223 г. на реке Калке состоялась битва русско-половецких сил с монголами. Она завершилась разгромом русско-половецкого войска."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "table13", "q": "Заполните пустые ячейки таблицы, используя приведённый ниже список пропущенных элементов: для каждого пропуска, обозначенного буквой, выберите номер нужного элемента.", "items": ["1239 г.", "Семинедельная оборона города от превосходящих численно монгольских войск.", "Чудское озеро.", "Суздаль.", "Рязань.", "Руководимая воеводой Дмитром оборона города от монгольских войск.", "1238 г.", "Новгородско-шведская битва, завершившаяся победой новгородского войска.", "1237 г."], "rows": [["Козельск", "{А}", "{Б}"], ["{В}", "Осада первого русского города Батыем в рамках похода на Северо-Восточную Русь", "{Г}"], ["Ижора", "{Д}", "1240 г."], ["{Е}", "Разгром ливонских рыцарей новгородским войском под командованием князя Александра Ярославича", "1242 г."]], "ans": "275983", "check": {"mode": "cells", "n": 6, "letters": true}, "expl": ["А, Б) Героическая оборона Козельска продолжалась семь недель (2) и пришлась на 1238 год (7).", "В, Г) Первый город, который Батый взял в рамках похода на Северо-Восточную Русь, — Рязань (5), 1237 год (9).", "Д) Невская битва (8) состоялась 15 июля 1240 г. недалеко от устья реки Ижоры.", "Е) На Чудском озере (3) Александр Невский разгромил ливонских рыцарей в апреле 1242 г."]}, {"kind": "match", "q": "Установите соответствие между событиями и участниками этих событий: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Участники"], "left": ["Невская битва", "битва на р. Сить", "битва на р. Калке", "отказ Андрея Ярославича повиноваться ордынцам в 1252 г."], "right": ["Мстислав Удалой", "Александр Ярославич", "Владимир Мономах", "Юрий Всеволодович", "Ярослав Мудрый", "Андрей Ярославич"], "ans": "2416", "expl": ["А) Князь Александр Ярославич командовал новгородским войском в Невской битве против шведов в 1240 году.", "Б) Великий князь Владимирский Юрий Всеволодович командовал русским войском и погиб в битве на реке Сити против монголов в 1238 году.", "В) Князь Мстислав Удалой был одним из главных руководителей русского войска в битве на Калке в 1223 году.", "Г) В 1252 г. Андрей Ярославич отказался повиноваться ордынцам. Для его усмирения Орда направила карательное войско во главе с Неврюем, которое разгромило отряды Андрея под Переславлем-Залесским."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "match", "q": "Установите соответствие между событиями и участниками этих событий: к каждой позиции первого столбца подберите соответствующую позицию из второго столбца.", "h": ["События", "Участники"], "left": ["оборона Рязани от войск Батыя", "получение первого ярлыка на всю Русь", "восстание во Владимире против баскаков (1252 г.)", "битва на Калке"], "right": ["Андрей Ярославич", "Мстислав Черниговский", "Александр Невский", "Ярослав Всеволодович", "Евпатий Коловрат", "Юрий Всеволодович"], "ans": "5412", "expl": ["А) Выступление дружины Евпатия Коловрата против войск Батыя после разорения Рязани.", "Б) В 1243 году великий князь Владимирский Ярослав Всеволодович (отец Александра Невского) был вызван в Орду к хану Батыю и получил ярлык на великое княжение Владимирское, став первым русским князем, официально признанным Ордой верховным правителем на Руси.", "В) В 1252 году великий князь Владимирский Андрей Ярославич (брат Александра Невского) выступил против ордынского владычества.", "Г) Битва на реке Калке (1223) — сражение русско-половецких войск против монголов. Одним из участников был князь Мстислав Черниговский."], "check": {"mode": "cells", "n": 4, "letters": true}}, {"kind": "source", "intro": "Прочтите отрывок из летописи.", "text": ["В это время, 3 февраля, во вторник, до мясопустной недели, в день святого Симеона богоприимца, татары пришли ко Владимиру. Владимирцы со своими князьями и воеводою Петром Ослядюковичем затворились в городе. Татары подошли к Золотым воротам, ведя с собою княжича Владимира, сына великого князя Юрия Всеволодовича, и стали спрашивать: „В городе ли великий князь Юрий?“ А владимирцы начали в них стрелять. Они же сказали: „Не стреляйте!“. И, подойдя совсем близко к воротам, показали владимирцам княжича их Владимира, сына Юрьева, и спрашивали: „Узнаёте ли вашего княжича?“ А он был уныл лицом и изнемог от бедствий и лишений. Всеволод и Мстислав стояли на Золотых воротах и узнали своего брата Владимира. О, жалостно и слёз достойно видеть так брата! Всеволод и Мстислав со своими боярами и все горожане плакали, глядя на Владимира. А татары отошли от Золотых ворот, объехали весь город, рассматривая его, и раскинули стан на Земянах перед Золотыми воротами и около всего города; и было их очень много."], "q": "Используя отрывок и знания по истории, выберите в приведённом списке верные суждения. Запишите цифры, под которыми они указаны.", "items": ["Вскоре после описанных событий Владимир был разорён монголами.", "Во главе монгольского войска, подошедшего к Владимиру, стоял хан Узбек.", "Описанные летописцем события произошли в 1240 г.", "Автор летописи отмечает незначительное количество врагов, подошедших к городу.", "Владимирский князь Юрий Всеволодович с дружиной находился возле реки Сить.", "Горожане сочувствовали пленному княжичу Владимиру."], "ans": "156", "expl": ["1) ДА, верно. После осады, описанной в отрывке, монголы штурмом взяли Владимир и полностью разорили его.", "2) НЕТ, неверно. Во главе монгольского войска стояли Батый и Субэдэй. Хан Узбек правил Золотой Ордой значительно позже.", "3) НЕТ, неверно. Осада и взятие Владимира произошли в феврале 1238 года, а не в 1240.", "4) НЕТ, неверно. Автор, напротив, подчёркивает многочисленность врагов: «и было их очень много».", "5) ДА, верно. Великий князь Юрий Всеволодович в это время отправился на север, на реку Сить, чтобы собрать новое войско для борьбы с монголами.", "6) ДА, верно. Текст прямо передаёт сочувствие горожан: «О, жалостно и слёз достойно видеть так брата! Всеволод и Мстислав со своими боярами и все горожане плакали, глядя на Владимира»."], "check": {"mode": "set"}}, {"kind": "source", "intro": "Прочтите отрывок из исторического источника.", "text": ["Пришёл на Русскую землю… царь Батый со множеством своих воинов и стал на реке на Воронеже близ земли Рязанской… И услышал великий князь Юрий Ингваревич рязанский о нашествии… царя Батыя и тотчас послал в город Владимир к благоверному великому князю Юрию Всеволодовичу Владимирскому, прося у него помощи против… царя Батыя или чтобы сам на него пошёл…", "И стал воевать царь Батый окаянный Рязанскую землю, и пошёл ко граду Рязани. И осадил град, и бились пять дней неотступно. Батыево войско переменялось, а горожане бессменно бились. И многих горожан убили, а иных ранили, а иные от великих трудов изнемогли. А в шестой день спозаранку пошли… на город — одни с огнями, другие с пороками [осадными орудиями], а третьи с бесчисленными лестницами — и взяли град Рязань месяца декабря в двадцать первый день. И пришли в церковь соборную Пресвятой Богородицы и великую княгиню Агриппину, мать великого князя, со снохами и прочими княгинями посекли мечами, а епископа и священников огню предали — во святой церкви пожгли, и иные многие от оружия пали.", "И в городе многих людей, и жён, и детей мечами посекли… И не осталось в городе ни одного живого…"], "q": "Используя отрывок и знания по истории, выберите в приведённом списке верные суждения. Запишите цифры, под которыми они указаны.", "items": ["Рязань была разорена войсками Батыя в 1237 г.", "В одном из городов, упомянутых в отрывке, сформировалось первое ополчение.", "События, о которых повествует автор в данном отрывке, разворачивались на территории Галицко-Волынского княжества.", "Согласно тексту, Рязань оборонялась от войск Батыя менее одной недели.", "Владимирский князь, упомянутый в отрывке, первым получил от монголов ярлык на владимирское княжение.", "После разорения Рязани войска Батыя двинулись вверх по Оке."], "ans": "1246", "expl": ["1) ДА, верно. Рязань была взята и разорена войсками Батыя в 1237 году.", "2) ДА, верно. В Рязанской земле после разорения города действовал отряд воеводы Евпатия Коловрата.", "3) НЕТ, неверно. События разворачивались на территории Рязанского княжества, а не Галицко-Волынского, которое было разорено позже.", "4) ДА, верно. Согласно тексту, осада длилась пять дней, а на шестой день город был взят. То есть менее недели.", "5) НЕТ, неверно. Владимирский князь Юрий Всеволодович, упомянутый в отрывке, погиб в битве на реке Сити в марте 1238 года. Первым князем, получившим ярлык от монголов, стал его брат Ярослав Всеволодович.", "6) ДА, верно. После разорения Рязани войска Батыя двинулись вверх по Оке к Коломне, а затем продолжили поход вглубь Северо-Восточной Руси."], "check": {"mode": "set"}}, {"kind": "source", "intro": "Прочтите отрывок из исторического источника.", "text": ["Немцы же и чудь пошли за ним. Князь же великий поставил войско на Чудском озере на Узмени, у Вороньего камня, и, приготовившись к бою, пошёл против них. Войска сошлись на Чудском озере, было тех и других большое множество. Был же тут с князем и брат его Андрей со множеством воинов отца своего; было у князя множество храбрых, сильных и крепких, все наполнились воинственным духом, и были у них сердца подобны львиным.", "И сказали: „Княже, ныне пришло время положить свои головы за тебя“. Был же тогда день субботний, и на восходе солнца сошлись оба войска.", "И была здесь злая и великая сеча для немцев и чуди, и слышен был треск ломающихся копий и звук от ударов мечей, так что и лёд на замёрзшем озере подломился, и не видно было льда, потому что он покрылся кровью. И сам я слышал об этом от очевидца, бывшего там. И обратились немцы в бегство, и гнали их русские с боем как по воздуху, и некуда им было убежать, били их 7 вёрст по льду до Суболицкого берега, и пало немцев 500, а чуди бесчисленное множество, а в плен взяли 50 лучших немецких воевод и привели их в Новгород, а другие немцы утонули в озере, потому что была весна.", "А другие убежали тяжело раненными. Был же этот бой 5 апреля."], "q": "Используя отрывок и знания по истории, выберите в приведённом списке верные суждения. Запишите цифры, под которыми они указаны.", "items": ["За победу в этом сражении князь, командовавший русским войском, получил прозвище Невский.", "Русским войском в описываемой битве командовал князь Дмитрий.", "Один из сыновей князя, командовавшего русским войском в этой битве, стал основателем династии московских князей.", "Битва, которая описывается в отрывке, произошла в XIV в.", "Князь, командовавший русским войском в этой битве, стремился избегать военного столкновения с Золотой Ордой.", "Следствием битвы, описываемой в отрывке, стало ослабление наступления крестоносцев на северо-западные русские земли."], "ans": "356", "expl": ["1) НЕТ, неверно. Прозвище Невский князь Александр Ярославич получил за победу над шведами в Невской битве (1240 г.), а не за Ледовое побоище, которое описано в тексте.", "2) НЕТ, неверно. Русским войском командовал князь Александр Ярославич (Невский), а не Дмитрий. Дмитрий Донской жил и правил позже, в XIV веке.", "3) ДА, верно. Младший сын Александра Невского, Даниил Александрович, стал первым удельным князем Московским и родоначальником московской династии.", "4) НЕТ, неверно. Ледовое побоище произошло 5 апреля 1242 года, то есть в XIII веке.", "5) ДА, верно. Князь Александр Невский проводил политику сотрудничества с Золотой Ордой.", "6) ДА, верно. Разгром немецких рыцарей в Ледовом побоище приостановил их экспансию на восток и закрепил границы русских земель на северо-западе."], "check": {"mode": "set"}}, {"kind": "source", "intro": "Прочтите отрывок из исторического источника.", "text": ["И услышал великий князь Юрий Ингваревич Рязанский, что нет ему помощи от великого князя Владимирского, и тотчас послал за братией своей… и за другими князьями. И стали совет держать — как утолить нечестивца дарами. И послал сына своего князя Фёдора Юрьевича Рязанского к царю… с дарами и мольбами великими, чтобы не ходил войной на Рязанскую землю.", "…И стал воевать царь Рязанскую землю и пошёл ко граду Рязани. И обступили град, и бились неотступно пять дней. Войско переменялось, а горожане бессменно бились. И многих горожан убили, а иных ранили, а иные от великих трудов и ран изнемогли. А в шестой день спозаранку пошли враги на город — одни с огнями, другие со стенобитными орудиями, а третьи с бесчисленными лестницами — и взяли град Рязань в 21 день декабря. И во граде многих людей, и жён, и детей мечами посекли, а других в реке потопили и сродников рязанских князей, князей киевских и черниговских, — захватили."], "q": "Используя отрывок и знания по истории, выберите в приведённом списке верные суждения. Запишите цифры, под которыми они указаны.", "items": ["Современником событий, описанных в документе, был Александр Невский.", "Автор документа пишет, что осада Рязани продлилась больше двух недель.", "Царь, о котором идёт речь в отрывке, — хан Батый.", "Захватчики, о которых идёт речь в отрывке, продолжили свой поход завоеванием Новгорода и Пскова.", "Описываемые в отрывке события произошли в первой половине XIII в.", "В период, события которого описаны в представленном отрывке, великим князем Владимирским был Всеволод Большое Гнездо."], "ans": "135", "expl": ["1) ДА, верно. Александр Невский был современником взятия Рязани Батыем (1237 г.).", "2) НЕТ, неверно. Согласно тексту, осада Рязани длилась пять дней («бились неотступно пять дней»), а на шестой день город был взят. Это менее недели.", "3) ДА, верно. «Царь», о котором идёт речь, — это Батый, возглавлявший поход на Русь в 1237–1238 гг.", "4) НЕТ, неверно. После разгрома Северо-Восточной Руси Батый не пошёл на Новгород, а повернул на юг. Новгород и Псков не были завоёваны в ходе этого похода.", "5) ДА, верно. Осада и взятие Рязани произошли в 1237 году, то есть в первой половине XIII века.", "6) НЕТ, неверно. Великим князем Владимирским в это время был Юрий Всеволодович. Всеволод Большое Гнездо, его отец, умер в 1212 году."], "check": {"mode": "set"}}, {"kind": "source", "intro": "Прочтите отрывок из летописи.", "text": ["В ту зиму пришли из восточных стран лесом на Рязанскую землю безбожные ордынцы с царём Батыем. Придя, они сначала остановились станом у Онузы, взяли и сожгли её. Оттуда они отправили своих послов к рязанским князьям, требуя у них десятины от князей и людей, доспехами и конями. Не пустив послов в город, рязанские князья — Юрий Игоревич и его брат Олег, а также муромские и пронские князья выступили против ордынцев к Воронежу. Князья ответили: «Когда нас не будет, то всё будет ваше» <…> Рязанские князья послали к князю Юрию Владимирскому с просьбою, чтобы он прислал помощь или сам пришёл. Но князь Юрий не пошёл, не послушал просьбы рязанских князей; он хотел сам особо дать бой ордынцам…", "Рязанские, муромские и пронские князья выступили против безбожных и вступили с ними в бой, и была сеча зла, и одолели безбожные измаильтяне, а князья бежали, каждый в свой город. А ордынцы, рассвирепев, начали воевать больше всего Рязанскую землю с великою яростью; разбивали города, убивали людей, жгли и брали в плен. А рязанские князья затворились в городе с людьми, бились крепко и изнемогли. В тот же месяц ордынцы взяли город Рязань, весь сожгли, убили князя Юрия Игоревича, его княгиню, перебили других князей, а мужчин, женщин, детей, похватав, одних рассекали мечами, других убивали стрелами и бросали в огонь, предали огню много святых церквей, пожгли монастыри и сёла и забрали их имущество."], "q": "Используя отрывок и знания по истории, выберите в приведённом списке верные суждения. Запишите цифры, под которыми они указаны.", "items": ["События, описанные в отрывке, произошли в 1230-е гг.", "В отрывке упоминается князь, который руководил русскими дружинами в битве на реке Сити.", "Автор утверждает, что рязанские князья заплатили ордынцам выкуп.", "Современником событий, описанных в отрывке, был Андрей Рублёв.", "В отрывке указан полководец, который руководил ордынскими войсками в битве на реке Калке.", "Город, о захвате которого идёт речь в отрывке, ордынцы назвали «злым городом»."], "ans": "12", "expl": ["1) ДА, верно. Речь идёт о нашествии Батыя на Русь и разорении Рязани в декабре 1237 года, что относится к 1230-м годам.", "2) ДА, верно. Упоминается великий князь владимирский Юрий Всеволодович, который не прислал помощи рязанцам, а позже, в 1238 году, потерпел поражение и погиб в битве на реке Сити.", "3) НЕТ, неверно. Напротив, князья ответили: «Когда нас не будет, то всё будет ваше», то есть отказались платить и выступили против ордынцев.", "4) НЕТ, неверно. Андрей Рублёв (ок. 1360–1428) жил значительно позже — в XIV–XV веках. События относятся к 1237 году.", "5) НЕТ, неверно. В тексте упоминается хан Батый, который возглавлял ордынское войско в 1237 году. В битве на реке Калке (1223 год) монголами командовали Джебе и Субедей.", "6) НЕТ, неверно. «Злым городом» ордынцы назвали Козельск (в 1238 году), жители которого оказали особенно упорное сопротивление. В отрывке речь идёт о Рязани."], "check": {"mode": "set"}}, {"kind": "map", "map": "mong", "q": "Рассмотрите схему. Заполните пропуск в предложении (укажите год): «Осада города, отмеченного цифрой „3“, началась в 12__ году». Ответ запишите словом (словосочетанием).", "ans": "тридцать седьмом (тридцать седьмой)", "expl": ["Город под цифрой «3» (Рязань) первым встретил монгольское нашествие в конце 1237 г."], "text": null, "check": {"mode": "word", "accept": ["тридцатьседьмом", "тридцатьседьмой"]}}, {"kind": "map", "map": "mong", "q": "Рассмотрите схему. Укажите название города, обозначенного на схеме цифрой «2».", "ans": "Владимир", "expl": ["Под цифрой «2» отмечен Владимир. Ключевой ориентир — река Клязьма, на которой стоит этот город."], "text": null, "check": {"mode": "word", "accept": ["владимир"]}}, {"kind": "map", "map": "mong", "q": "Прочтите текст о событиях, отражённых на схеме, и, используя схему, укажите название реки, пропущенное в этом тексте. Ответ запишите в именительном падеже.", "ans": "Днестр", "expl": ["Для решения нужно найти на схеме Галич, который находится в Галицко-Волынской земле. На схеме видно, что Галич стоит на Днестре."], "text": "Галицко-волынский князь Даниил Романович, не дожидаясь начала вражеского нашествия, покинул территорию родной земли и вернулся на Волынь только после того, как получил известие об уходе монголов за пределы Руси. По предположению, сделанному в работе Мартина Димника, при заключении договора с монголами Даниил получил от них некие гарантии неприкосновенности своих земель. Киев пал, вскоре после этого монголы разорили и Волынское княжество. О бегстве галицко-волынских князей накануне вражеского нашествия предводителям монголов было известно заранее. Батый начал поход на Владимир-Волынский, удостоверившись, что Даниил Романович покинул пределы Руси. Отряды монголов разграбили и расположенный на ______________ Галич, о чём русские летописи оставили скудные сведения…", "check": {"mode": "word", "accept": ["днестр", "рекаднестр"]}}, {"kind": "map", "map": "mong", "q": "Какие суждения, относящиеся к схеме, являются верными? Запишите цифры, под которыми они указаны.", "items": ["Город под цифрой «7» был взят ливонскими рыцарями в период событий, отражённых на схеме.", "Под цифрой «9» отмечен г. Чернигов.", "Город Смоленск, согласно данным схемы, был разрушен монголами.", "Город под цифрой «6» в период отражённых на схеме событий был столицей самостоятельного княжества.", "При осаде города, отмеченного цифрой «1», погиб великий князь Юрий Всеволодович.", "Столица Волжской Булгарии — город Биляр — был разрушен монголами в рамках событий, отражённых на схеме."], "ans": "26", "expl": ["1) НЕТ, неверно. Новгород Великий (под цифрой «7») ливонские рыцари не брали.", "2) ДА, верно. Под цифрой «9» расположен Чернигов. Ориентир — близость Днепра.", "3) НЕТ, неверно. Названия городов, разрушенных монголами, на схеме подчёркнуты (см. легенду). Смоленск не подчёркнут.", "4) НЕТ, неверно. Город под цифрой «6» — это Москва; столицей самостоятельного княжества она станет только в конце 1270-х гг.", "5) НЕТ, неверно. Под цифрой «1» отмечен г. Козельск, а владимирский князь Юрий Всеволодович погиб в битве на реке Сить.", "6) ДА, верно. Название города Биляр подчёркнуто, следовательно, он был разрушен монголами."], "check": {"mode": "set"}}, {"kind": "map", "map": "nw", "q": "Рассмотрите схему. Укажите век, когда произошли события, обозначенные на схеме стрелками. Ответ запишите словом.", "ans": "тринадцатый (тринадцатом)", "expl": ["Все военные действия, отражённые на схеме, относятся к 1230-м и 1240-м годам, то есть к XIII веку."], "text": null, "check": {"mode": "word", "accept": ["тринадцатый", "тринадцатом"]}}, {"kind": "map", "map": "nw", "q": "Рассмотрите схему. Назовите князя, командовавшего русскими войсками в походах, обозначенных в легенде схемы цифрой «5».", "ans": "Александр Невский (Александр Ярославич)", "expl": ["Походы на Неву, на Псков и к Чудскому озеру совершил Александр Невский."], "text": null, "check": {"mode": "word", "accept": ["александрневский", "александрярославич", "александрярославичневский", "невский"]}}, {"kind": "map", "map": "nw", "q": "Прочтите текст о событиях, обозначенных на схеме, и укажите название реки, которое пропущено в тексте.", "ans": "Ловать", "expl": ["Для решения находим на схеме Великие Луки и реку, на которой они расположены."], "text": "Впервые Великие Луки упоминаются новгородскими летописцами как город Луки на ______________ под 1166 годом, когда киевский князь Ростислав I Мстиславич прибыл сюда для переговоров с новгородскими боярами. Великие Луки упоминаются в новгородских берестяных грамотах № 675 (1140-е — начало 1160-х годов) и № 1005 (вторая четверть — середина XII века). В 1211 году была построена Великолукская крепость для обороны подступов к Новгороду и Пскову. За воинские заслуги город заслужил звание «оплечье Новгорода» и «предсердие Москвы».", "check": {"mode": "word", "accept": ["ловать", "рекаловать"]}}, {"kind": "map", "map": "nw", "q": "Какие суждения, относящиеся к схеме, являются верными? Запишите цифры, под которыми они указаны.", "items": ["Цифрой «8» на схеме обозначена река, по которой в древности проходил торговый путь «из варяг в греки».", "В период, отражённый на схеме, Торжок находился под контролем Новгородского государства.", "Цифрой «4» в легенде схемы обозначено направление похода шведских войск.", "Поход войск, обозначенных в легенде схемы цифрой «3», возглавлял Мамай.", "Сражение, обозначенное на схеме цифрой «2», произошло в том же году, когда монгольскими завоевателями был захвачен город Киев.", "Сражение, обозначенное на схеме цифрой «9», произошло весной."], "ans": "1256", "expl": ["1) ДА, верно. По реке Волхов (отмечена цифрой «8») проходила северная часть торгового пути «из варяг в греки».", "2) ДА, верно. На схеме Торжок находится в границах Новгородской земли — под контролем Новгорода.", "3) НЕТ, неверно. Цифрой «4» обозначены походы, осуществлённые Ливонским орденом.", "4) НЕТ, неверно. Поход, отмеченный цифрой «3», — это нашествие Батыя на Северо-Восточную Русь.", "5) ДА, верно. Батый взял Киев в 1240 году. В том же году состоялась Невская битва, обозначенная цифрой «2».", "6) ДА, верно. Битва на Чудском озере состоялась 5 апреля 1242 г., то есть весной."], "check": {"mode": "set"}}, {"kind": "bonus", "q": "Ура! Новая тема изучена! Теперь мы отлично разбираемся в истории IX–XIII вв.! Кто самый умный и крутой котик??", "ans": "я!", "check": {"mode": "word", "accept": ["я"]}, "expl": ["Конечно ты! 🐾"]}];
+const P2={"src": ["Узнали монголы о междоусобных войнах в Русской земле, и об оскудении русских войск, и о великом богатстве, собранном на Руси за многие годы, и двинулись они из восточных стран… Пленили сначала Булгарскую землю… А в третий год пришло их на Русскую землю бесчисленное множество — как саранча, пожирающая траву, так и эти варвары христианский род истребляли.", "Окаянные зимовали около Чёрного леса и отсюда пришли тайком лесами на Рязанскую землю во главе с царём их ______________. И сначала пришли и разбили лагерь. И оттуда послали своих послов к князьям рязанским в Рязань, требуя у них десятой части: каждого десятого из князей, десятого из людей и из коней: десятого из белых коней, десятого из вороных, десятого из бурых, десятого из пегих, и десятой части от всего. Князья же рязанские, Юрий Ингваревич и братья его Олег и Роман Ингваревичи, и муромские князья, и пронские решили сражаться с ними, не пуская их в свою землю. И так ответили они послам царя монгольского ______________: «Когда нас всех не будет в живых, то всё это ваше будет». К великому князю Юрию Всеволодовичу во Владимир послали рязанские князья своих послов, прося помощи или чтобы сам пришёл вместе постоять за землю Русскую. Но великий князь Юрий не внял мольбе рязанских князей, сам не пошёл и не прислал помощь, поскольку хотел он сам по себе биться с монголами. Но гневу Божьему уже невозможно было противиться… Господь сначала отнял у нас силы, а за наши грехи послал на нас грозу, и страх, и трепет, и недомыслие.", "Монголы начали завоёвывать землю Рязанскую, и осадили Рязань, и огородили её острогом месяца декабря в шестнадцатый день. Князь же Юрий Рязанский заперся в городе с жителями, а князь Роман отступил к Коломне со своими людьми. И взяли враги приступом город двадцать первого декабря, убили князя Юрия Ингваревича и его княгиню, а людей умертвили. И, перебив людей, а иных забрав в плен, враги зажгли город…"], "tasks": [{"n": 13, "src": true, "q": "Назовите монгольского «царя», имя которого дважды пропущено в тексте. Укажите с точностью до десятилетия время, когда произошли события, описанные в тексте. Укажите битву, в которой погиб упомянутый в тексте князь Юрий Всеволодович.", "a": ["1) монгольский «царь»: Батый;", "2) время: 1230-е гг.;", "3) битва, в которой погиб Юрий Всеволодович: битва на реке Сити."]}, {"n": 14, "src": true, "q": "Почему, по мнению автора, великий князь владимирский Юрий Всеволодович не прислал помощь рязанскому князю? Информация о каких особенностях развития Русской земли, по мнению автора, сподвигла монголов двинуться на Русь? Укажите две особенности. Избегайте излишнего цитирования.", "a": ["1) причина, по которой великий князь владимирский Юрий Всеволодович не прислал помощь рязанскому князю: «поскольку хотел он сам по себе биться с монголами»;", "2) особенности развития Русской земли, которые сподвигли монголов двинуться на Русь (любые две):", "— междоусобные войны в Русской земле;", "— «оскудение русских войск»;", "— «великое богатство, собранное на Руси за многие годы»."]}, {"n": 15, "src": true, "q": "В данном отрывке идёт речь о завоевательном походе монголов на русские земли. Назовите империю, господствующей религией в которой было православие, также подвергшуюся нашествию завоевателей и покорённую ими. Чем результат завоевания этой империи отличается от результата завоевания Руси монголами?", "a": ["1) империя: Византийская империя;", "2) результат: Византийская империя была завоёвана турками-османами и после этого больше не смогла восстановиться, тогда как Русь сохранилась, несмотря на зависимость от Орды, и впоследствии смогла освободиться от ордынской зависимости."]}, {"n": 19, "q": "В 1237–1241 гг. было совершено несколько монгольских нашествий на Русь, вследствие чего была установлена зависимость Руси от Орды. Укажите:", "sub": ["а) причину установления зависимости, связанную с военной мощью сторон;", "б) причину, почему монголы не стали включать русские земли в состав Золотой Орды;", "в) последствие установления зависимости, связанное с обороноспособностью русских земель."], "form": ["а)", "б)", "в)"], "a": ["а) Одной из причин установления зависимости Руси от Золотой Орды, связанной с военной мощью сторон, является превосходство военной мощи противника над русским войском. Большинство русских городов не были подготовлены к обороне, тогда как у монгольских войск было численное превосходство и превосходство в вооружении. Многочисленность монгольского войска в сравнении с русскими дружинами, крепкая дисциплина и высокая степень организованности сказались на быстрых победах монгольской армии и установлении зависимости.", "б) Одной из причин отказа от включения русских земель в состав Золотой Орды являются суровые природно-климатические условия русских княжеств. Русские земли находились в неподходящей для монголов природно-климатической зоне (в лесах). Монголы же привыкли вести кочевой образ жизни в степи и не видели смысла захватывать эти территории, предпочитая установить систему политической и экономической зависимости.", "в) Последствием установления зависимости Руси от Золотой Орды, связанным с обороноспособностью русских земель, является ослабление обороноспособности Руси. В сражениях с монголами погибли многие князья и их дружинники, составлявшие основу военного могущества своих княжеств. Кроме того, нашествие монголов и последующее владычество повлекли резкое ухудшение демографической ситуации на Руси. Всё это в совокупности не позволяло вести успешную оборону против захватчиков."]}, {"n": 20, "q": "Вспомните смысл понятия «ярлык» и ответьте на вопросы. Кто выдавал ярлык и кому он предоставлял право на княжение? На какое княжение ярлык выдавался сначала, а на какое — впоследствии?", "a": ["1) ответ на первый вопрос: ярлык выдавался ханом Золотой Орды князьям Северо-Восточной Руси и давал право на великое или удельное княжение;", "2) ответ на второй вопрос: сначала ярлык выдавался на киевское княжение, затем — на владимирское."]}, {"n": 22, "q": "Сформулируйте два аргумента в подтверждение следующей точки зрения: «Ордынское владычество имело определённые положительные последствия для дальнейшего развития Руси». При изложении аргументов обязательно используйте исторические факты. Для второго аргумента не следует использовать факты, которые вы уже использовали для первого аргумента.", "form": ["Аргумент 1:", "Аргумент 2:"], "a": ["Аргумент 1: в период ордынского владычества веротерпимая политика монголов способствовала сохранению Русской православной церкви и православной культуры. Ханы Орды освобождали от уплаты дани служителей всех религий, в том числе православное духовенство. Благодаря освобождению от дани церковь сохраняла часть своих средств и могла продолжать религиозную и культурную деятельность. Это способствовало сохранению православных традиций и церковной организации в русских землях.", "Аргумент 2: ордынское владычество способствовало сохранению торговых связей русских земель с Востоком и Западной Европой. Через территорию Золотой Орды проходили торговые пути между Азией и Европой, а Новгород получал большие прибыли от торговли восточными товарами со странами Западной Европы. Поскольку восточные торговые пути контролировала Орда, мирные отношения с ханами позволяли новгородским купцам продолжать эту торговлю. Получаемые доходы поддерживали развитие торговли и городского хозяйства Новгородской земли."]}]};
+const LET="АБВГДЕ";
+const KIND={match:"Соответствие",chrono:"Хронология",table13:"Таблица",source:"Работа с источником",map:"Работа со схемой",bonus:"Бонус"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+document.getElementById('videoList').innerHTML=VIDEOS.map((v,i)=>{
+  const src=`https://rutube.ru/play/embed/${v.id}/?p=${v.p}`, page=`https://rutube.ru/video/private/${v.id}/?p=${v.p}`;
+  return `<div class="video"><div class="vh"><span class="tag">${i+1}</span><h3>${v.t}</h3><a href="${page}" target="_blank" rel="noopener">Открыть на Rutube ↗</a></div>
+  <div class="ratio"><iframe src="${src}" loading="lazy" allow="clipboard-write; autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div>`}).join('');
+
+function go(v,anchor){
+  document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));
+  if(anchor){requestAnimationFrame(()=>document.getElementById(anchor).scrollIntoView())}else window.scrollTo(0,0);
+}
+
+/* ---------- TEST ---------- */
+let cur=0, res=[];
+function startTest(){cur=0;res=new Array(QUIZ.length).fill(null);go('test');renderQ()}
+function items(list){return '<ol class="items">'+list.map((x,i)=>`<li><b>${i+1})</b> ${esc(x)}</li>`).join('')+'</ol>'}
+function body(t){
+  let h='';
+  if(t.kind==='match'){
+    h+=`<p class="q">${esc(t.q)}</p><table class="mt"><tr><th>${esc(t.h[0])}</th><th>${esc(t.h[1])}</th></tr>`;
+    for(let i=0;i<6;i++)h+=`<tr><td>${i<t.left.length?LET[i]+') '+esc(t.left[i]):''}</td><td>${i+1}) ${esc(t.right[i])}</td></tr>`;
+    h+='</table>';
+  }else if(t.kind==='chrono'){h+=`<p class="q">${esc(t.q)}</p>`+items(t.items)}
+  else if(t.kind==='table13'){
+    const b=x=>`<span class="blank">(${x})</span>`;
+    h+=`<p class="q">${esc(t.q)}</p><div class="intro">Пропущенные элементы:</div><div class="pool">${items(t.items)}</div>
+    <table class="mt"><tr><th>Географический объект</th><th>Событие (явление, процесс)</th><th>Время</th></tr>`+
+    t.rows.map(r=>'<tr>'+r.map(c=>{const m=/^\{(.)\}$/.exec(c);return '<td>'+(m?b(m[1]):esc(c))+'</td>'}).join('')+'</tr>').join('')+'</table>';
+  }else if(t.kind==='bonus'){h+=`<p class="q">${esc(t.q)}</p>`;
+  }else if(t.kind==='source'){
+    h+=`<div class="intro">${esc(t.intro)}</div><div class="src">`+t.text.map((p,i,a)=>`<p>${i==0?'«':''}${esc(p)}${i==a.length-1?'»':''}</p>`).join('')+`</div><p class="q">${esc(t.q)}</p>`+items(t.items);
+  }else if(t.kind==='map'){
+    h+=`<p class="q">${esc(t.q)}</p>`;
+    if(t.text)h+=`<div class="src"><p>«${esc(t.text)}»</p></div>`;
+    if(t.items)h+=items(t.items);
+    h+=`<div class="map"><img src="img/${t.map}.jpg" alt="Схема" onclick="zoom(this.src)"></div>`;
+  }
+  return h;
+}
+function answerUI(t){
+  const c=t.check;
+  if(c.mode==='cells'){
+    let h='<div class="cells">';
+    for(let i=0;i<c.n;i++)h+=`<div class="cell"><label>${c.letters?LET[i]:''}</label><input inputmode="numeric" maxlength="1" data-i="${i}"></div>`;
+    return h+'</div>';
+  }
+  if(c.mode==='set')return '<input class="txt" id="ansTxt" inputmode="numeric" placeholder="Например: 135" autocomplete="off">';
+  return '<input class="txt" id="ansTxt" placeholder="Ответ словом" autocomplete="off"><p class="hint">Пишите словом, без пробелов можно — регистр не важен.</p>';
+}
+function dots(){return '<div class="dots">'+QUIZ.map((_,i)=>`<button class="${i===cur?'cur ':''}${res[i]===true?'ok':res[i]===false?'bad':''}" onclick="cur=${i};renderQ()">${i+1}</button>`).join('')+'</div>'}
+function renderQ(){
+  const t=QUIZ[cur], done=res.filter(x=>x!==null).length, pts=res.filter(x=>x===true).length;
+  const P=document.getElementById('testPanel');
+  P.innerHTML=`<div class="qtop"><button class="back" onclick="go('home','practice')">← К теме</button><div class="prog"><i style="width:${done/QUIZ.length*100}%"></i></div><span class="score-mini">${pts} / ${QUIZ.length} баллов</span></div>
+  ${dots()}
+  <div class="qnum"><b>${cur+1}</b><span>${KIND[t.kind]}</span></div>
+  ${body(t)}
+  <div class="answer"><div>${answerUI(t)}</div><button class="btn o" id="chk" onclick="check()">Проверить</button></div>
+  <div class="fb" id="fb"></div>
+  <div class="nav-row"><button class="btn g" onclick="prev()" ${cur===0?'disabled':''}>← Назад</button><button class="btn n" id="nextBtn" onclick="next()">${cur===QUIZ.length-1?'Завершить':'Дальше →'}</button></div>`;
+  const cells=[...P.querySelectorAll('.cell input')];
+  cells.forEach((inp,i)=>{
+    inp.addEventListener('input',()=>{inp.value=inp.value.replace(/\D/g,'').slice(-1);if(inp.value&&cells[i+1])cells[i+1].focus()});
+    inp.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!inp.value&&cells[i-1])cells[i-1].focus();if(e.key==='Enter')check()});
+  });
+  const tx=P.querySelector('#ansTxt'); if(tx)tx.addEventListener('keydown',e=>{if(e.key==='Enter')check()});
+  if(res[cur]!==null){showFB(res[cur],true)}
+  else (cells[0]||tx).focus({preventScroll:true});
+}
+const norm=s=>s.toLowerCase().replace(/ё/g,'е').replace(/[^a-zа-я0-9]/g,'');
+function getAns(){
+  const t=QUIZ[cur];
+  if(t.check.mode==='cells')return [...document.querySelectorAll('.cell input')].map(i=>i.value).join('');
+  return document.getElementById('ansTxt').value;
+}
+function check(){
+  if(res[cur]!==null)return;
+  const t=QUIZ[cur], c=t.check, a=getAns();
+  let ok;
+  if(c.mode==='cells'){if(a.length<c.n){flash();return} ok=a===t.ans}
+  else if(c.mode==='set'){const d=a.replace(/\D/g,''); if(!d){flash();return} ok=[...new Set(d)].sort().join('')===[...t.ans].sort().join('')&&d.length===t.ans.length}
+  else {const n=norm(a); if(!n){flash();return} ok=c.accept.includes(n)}
+  res[cur]=ok; showFB(ok,false);
+  document.querySelector('.prog i').style.width=(res.filter(x=>x!==null).length/QUIZ.length*100)+'%';
+  document.querySelector('.score-mini').textContent=res.filter(x=>x===true).length+' / '+QUIZ.length+' баллов';
+  document.querySelectorAll('.dots button')[cur].classList.add(ok?'ok':'bad');
+}
+function flash(){const a=document.querySelector('.answer');a.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:250})}
+function showFB(ok,locked){
+  const t=QUIZ[cur], fb=document.getElementById('fb');
+  fb.className='fb on '+(ok?'ok':'bad');
+  fb.innerHTML=`<div class="verdict">${ok?'✓ Верно! +1 балл':'✗ Неверно'}</div><div class="right">Правильный ответ: <code>${esc(t.ans)}</code></div><div class="ex">${t.expl.map(p=>`<p>${esc(p)}</p>`).join('')}</div>`;
+  document.querySelectorAll('.answer input').forEach(i=>i.disabled=true);
+  document.getElementById('chk').disabled=true;
+  if(!locked)fb.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function next(){if(cur<QUIZ.length-1){cur++;renderQ();window.scrollTo(0,document.getElementById('testPanel').offsetTop-90)}else finish()}
+function prev(){if(cur>0){cur--;renderQ()}}
+function finish(){
+  const pts=res.filter(x=>x===true).length, skipped=res.filter(x=>x===null).length;
+  const msg=pts>=27?'Блестяще! Тема в кармане 🐾':pts>=21?'Хороший результат! Повторите ошибки — и будет идеально.':pts>=14?'Неплохо, но стоит ещё раз пройтись по скрипту и запоминашке.':'Вернитесь к лекциям и запоминашке, а потом попробуйте ещё раз.';
+  document.getElementById('testPanel').innerHTML=`<div class="result"><img src="img/logo.png" alt=""><div class="big-score">${pts}<span style="font-size:36px;color:var(--soft)"> / ${QUIZ.length}</span></div>
+  <h2>${msg}</h2>${skipped?`<p style="color:var(--soft)">Без ответа: ${skipped}</p>`:''}
+  <p style="color:var(--soft)">Нажмите на номер задания, чтобы посмотреть его ещё раз.</p>
+  <div class="grid30">${res.map((r,i)=>`<button class="${r===true?'ok':'bad'}" onclick="cur=${i};renderQ()">${i+1}</button>`).join('')}</div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn o" onclick="startTest()">Пройти заново</button><button class="btn n" onclick="go('part2')">Вторая часть →</button></div></div>`;
+  window.scrollTo(0,0);
+}
+function zoom(src){const l=document.getElementById('lb');l.querySelector('img').src=src;l.classList.add('on')}
+
+/* ---------- PART 2 ---------- */
+const srcHTML='<div class="intro">Прочтите отрывок из исторического источника и выполните задание.</div><div class="src"><p><b style="font-style:normal">Из летописи</b></p>'+P2.src.map((p,i,a)=>`<p>${i==0?'«':''}${esc(p)}${i==a.length-1?'»':''}</p>`).join('')+'</div>';
+let shownSrc=false;
+document.getElementById('p2list').innerHTML=P2.tasks.map((t,k)=>{
+  let h=`<div class="panel"><div class="qnum"><b>${t.n}</b><span>Задание ${t.n}</span></div>`;
+  if(t.src){h+= !shownSrc ? srcHTML : `<details class="srcd"><summary>Показать отрывок</summary>${srcHTML}</details>`; shownSrc=true;}
+  h+=`<p class="q">${esc(t.q)}</p>`;
+  if(t.sub)h+='<div>'+t.sub.map(s=>`<p style="margin:0 0 4px">${esc(s)}</p>`).join('')+'</div>';
+  if(t.form)h+='<ul class="lines">'+t.form.map(f=>`<li>${esc(f)}<span></span></li>`).join('')+'</ul>';
+  h+=`<div class="reveal"><button class="btn o" onclick="toggleAns(this,${k})">Посмотреть ответ</button></div><div class="ans" id="ans${k}"><h4>Правильный ответ</h4>${t.a.map(p=>`<p>${esc(p)}</p>`).join('')}</div></div>`;
+  return h;
+}).join('');
+function toggleAns(b,k){const a=document.getElementById('ans'+k);a.classList.toggle('on');b.textContent=a.classList.contains('on')?'Скрыть ответ':'Посмотреть ответ'}
+</script>
+</body>
+</html>
